@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jaein Lee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #f4f3ee;
+      --text:     #1c1c1a;
+      --muted:    #6b6b63;
+      --green:    #8B0029;
+      --border:   #ddddd5;
+      --card-bg:  #ffffff;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-name {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 400;
+      padding-bottom: 2px;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--text);
+      border-bottom: 2px solid var(--text);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 6rem 5% 5rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: center;
+    }
+    .hero-text h1 {
+      font-family: 'EB Garamond', serif;
+      font-size: clamp(2.8rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 0.6rem;
+      color: var(--text);
+    }
+    .hero-text .position {
+      color: var(--muted);
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: 0.1rem;
+    }
+    .hero-text .tagline {
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      font-size: 1.25rem;
+      color: var(--text);
+      margin-top: 1.4rem;
+      margin-bottom: 2rem;
+      max-width: 560px;
+      line-height: 1.6;
+    }
+    .hero-photo img {
+      width: 220px;
+      height: 270px;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+      background: var(--border);
+    }
+    .hero-photo .photo-placeholder {
+      width: 220px;
+      height: 270px;
+      background: var(--border);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* ── BUTTONS ── */
+    .btn-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.9rem;
+      font-family: 'Inter', sans-serif;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s;
+      cursor: pointer;
+    }
+    .btn-filled {
+      background: var(--green);
+      color: #fff;
+      border: 1.5px solid var(--green);
+    }
+    .btn-filled:hover { background: #6b0020; border-color: #6b0020; }
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1.5px solid var(--border);
+    }
+    .btn-outline:hover { border-color: var(--muted); }
+
+    /* ── SECTIONS ── */
+    .section-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3.5rem 5%;
+      border-top: 1px solid var(--border);
+    }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+    .section-text {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--text);
+      max-width: 720px;
+    }
+
+    /* ── RESEARCH AREAS ── */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.6rem 1.5rem;
+    }
+    .card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+      color: var(--text);
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .card a {
+      font-size: 0.88rem;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .card a:hover { color: var(--green); }
+
+    /* ── RECENT PUBS ── */
+    .pub-list { list-style: none; }
+    .pub-item {
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .pub-item:last-child { border-bottom: none; }
+    .pub-item .pub-title { font-weight: 500; color: var(--text); }
+    .pub-item .pub-meta { color: var(--muted); font-size: 0.88rem; margin-top: 0.2rem; }
+    .pub-item a { color: var(--green); text-decoration: none; font-size: 0.85rem; }
+    .pub-item a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 5%;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 640px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-photo { order: -1; }
+      .hero-photo .photo-placeholder,
+      .hero-photo img { width: 160px; height: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-name" href="index.html">Jaein Lee</a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="teaching.html">Teaching</a></li>
+    <li><a href="cv.html">CV</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Jaein Lee</h1>
+    <p class="position">Assistant Professor of Sociology</p>
+    <p class="position">Department of Public Sociology,<br>Korea University Sejong Campus</p>
+    <p class="tagline">I study how social environments shape health and mortality inequalities, with a focus on mental health, suicide, and time use in South Korea.</p>
+    <div class="btn-row">
+      <a class="btn btn-filled" href="cv.html">CV</a>
+      <a class="btn btn-outline" href="https://scholar.google.com/citations?hl=en&user=dPQl3akAAAAJ" target="_blank">Google Scholar</a>
+      <a class="btn btn-outline" href="https://orcid.org/0000-0002-4575-5285" target="_blank">ORCID</a>
+      <a class="btn btn-outline" href="mailto:poryma@korea.ac.kr">Email</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <img src="photo.jpg" alt="Jaein Lee" />
+  </div>
+</section>
+
+<!-- ABOUT -->
+<div class="section-wrap">
+  <p class="section-label">About</p>
+  <p class="section-text">
+    My research examines how social environments shape health inequalities, with particular attention to mortality, mental health, and suicide in South Korea and beyond. I use computational text analysis, quantitative longitudinal methods, and time-use data to trace how social disorganization, community violence, and environmental hazards accumulate into durable health disparities. I am especially interested in how social context affects aging populations and the unequal distribution of mortality risk.
+  </p>
+</div>
+
+<!-- RESEARCH AREAS -->
+<div class="section-wrap">
+  <p class="section-label">Research Areas</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Mortality &amp; Suicide</h3>
+      <p>How do social and contextual factors shape regional and demographic disparities in suicide and mortality in South Korea?</p>
+      <a href="research.html">Read more →</a>
+    </div>
+    <div class="card">
+      <h3>Mental Health &amp; Aging</h3>
+      <p>How do leisure time, social isolation, and environmental stressors affect the mental health of older adults in Korea?</p>
+      <a href="research.html">Read more →</a>
+    </div>
+    <div class="card">
+      <h3>Community Violence &amp; Family</h3>
+      <p>How does local violence shape family formation and dissolution patterns, drawing on comparative cases from Mexico and South Korea?</p>
+      <a href="research.html">Read more →</a>
+    </div>
+    <div class="card">
+      <h3>Environmental Justice</h3>
+      <p>How are environmental hazards and their negative health outcomes unequally distributed across communities in the United States?</p>
+      <a href="research.html">Read more →</a>
+    </div>
+  </div>
+</div>
+
+<!-- RECENT PUBLICATIONS -->
+<div class="section-wrap">
+  <p class="section-label">Recent Publications</p>
+  <ul class="pub-list">
+    <li class="pub-item">
+      <div class="pub-title">Racial-Ethnic Disparities in Dyadic Pregnancy Intentions Preceding Births in the United States</div>
+      <div class="pub-meta">Caudillo, M. L., Kim, S., <strong>Lee, J.</strong>, &amp; Liu, J. (2024). <em>Population Research and Policy Review.</em></div>
+      <a href="https://doi.org/10.1007/s11113-024-09860-z" target="_blank">↗ DOI</a>
+    </li>
+    <li class="pub-item">
+      <div class="pub-title">Changing Attitudes Toward Homosexuality in South Korea, 1996–2010</div>
+      <div class="pub-meta">Lin, Z. &amp; <strong>Lee, J.</strong> (2024). <em>Social Science Research, 118.</em></div>
+      <a href="https://doi.org/10.1016/j.ssresearch.2023.102972" target="_blank">↗ DOI</a>
+    </li>
+    <li class="pub-item">
+      <div class="pub-title">Why is the Korean Girls' Suicidal Ideation Rate Higher than the Boys' Rate? The Role of the Gender Heterogeneity of Peer Groups</div>
+      <div class="pub-meta">Bae, Y. &amp; <strong>Lee, J.</strong> (2023). <em>PLoS ONE, 18(9).</em></div>
+      <a href="https://doi.org/10.1371/journal.pone.0290072" target="_blank">↗ DOI</a>
+    </li>
+    <li class="pub-item">
+      <div class="pub-title">Community Violence and Instability of Marriages and Cohabitations in Mexico</div>
+      <div class="pub-meta">Caudillo, M. L. &amp; <strong>Lee, J.</strong> (2023). <em>Social Forces, 102(1), 287–309.</em></div>
+      <a href="https://doi.org/10.1093/sf/soac140" target="_blank">↗ DOI</a>
+    </li>
+  </ul>
+  <a class="btn btn-outline" href="research.html" style="margin-top:1.2rem; display:inline-block;">View all publications →</a>
+</div>
+
+<footer>
+  <p>Jaein Lee · Korea University Sejong Campus · poryma@korea.ac.kr</p>
+</footer>
+
+</body>
+</html>

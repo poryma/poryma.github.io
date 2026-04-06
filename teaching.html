@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teaching – Jaein Lee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #f4f3ee; --text: #1c1c1a; --muted: #6b6b63; --green: #8B0029; --border: #ddddd5; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.7; }
+
+    nav {
+      position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border);
+      z-index: 100; padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-name { font-weight: 600; font-size: 1rem; color: var(--text); text-decoration: none; }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.95rem; padding-bottom: 2px; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); border-bottom: 2px solid var(--text); }
+
+    .page-header { max-width: 900px; margin: 0 auto; padding: 4rem 5% 2.5rem; }
+    .page-header h1 { font-family: 'EB Garamond', serif; font-size: 2.8rem; font-weight: 700; line-height: 1.1; }
+    .page-header p { color: var(--muted); font-size: 1rem; margin-top: 0.8rem; max-width: 620px; line-height: 1.75; }
+
+    .section-wrap { max-width: 900px; margin: 0 auto; padding: 2.5rem 5%; border-top: 1px solid var(--border); }
+    .section-label { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem; }
+
+    .institution-block { margin-bottom: 2rem; }
+    .institution-block h3 {
+      font-size: 0.95rem; font-weight: 600; color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+    .institution-block .years { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.8rem; }
+    .course-list { list-style: none; }
+    .course-item {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 0.55rem 0; border-bottom: 1px solid var(--border);
+      font-size: 0.92rem;
+    }
+    .course-item:last-child { border-bottom: none; }
+    .course-name { color: var(--text); }
+    .course-meta { color: var(--muted); font-size: 0.83rem; text-align: right; margin-left: 1rem; white-space: nowrap; }
+
+    .seminar-list { list-style: none; }
+    .seminar-item { padding: 0.6rem 0; border-bottom: 1px solid var(--border); font-size: 0.92rem; }
+    .seminar-item:last-child { border-bottom: none; }
+    .seminar-item .sem-title { color: var(--text); }
+    .seminar-item .sem-meta { color: var(--muted); font-size: 0.83rem; margin-top: 0.1rem; }
+
+    footer { border-top: 1px solid var(--border); padding: 2rem 5%; text-align: center; color: var(--muted); font-size: 0.82rem; max-width: 900px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-name" href="index.html">Jaein Lee</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="teaching.html" class="active">Teaching</a></li>
+    <li><a href="cv.html">CV</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <h1>Teaching</h1>
+  <p>I am committed to student-centered pedagogy that connects sociological theory to real-world problems. Below are courses I have taught and those I am prepared to offer.</p>
+</div>
+
+<!-- COURSES TAUGHT -->
+<div class="section-wrap">
+  <p class="section-label">Courses Taught</p>
+  <p style="font-size:0.83rem; color:var(--muted); margin-bottom:1.5rem;">Ratings are from "Overall rate of the instructor" on a 5-point scale.</p>
+
+  <div class="institution-block">
+    <h3>Korea University Sejong Campus</h3>
+    <div class="years">2025 – Present</div>
+  </div>
+
+  <div class="institution-block">
+    <h3>Arkansas State University</h3>
+    <div class="years">2023 – 2025</div>
+    <ul class="course-list">
+      <li class="course-item"><span class="course-name">Introduction to Sociology</span><span class="course-meta">4.7 / 5.0 · In-person</span></li>
+      <li class="course-item"><span class="course-name">Sociology of Disaster</span><span class="course-meta">4.7 / 5.0 · In-person</span></li>
+      <li class="course-item"><span class="course-name">Methods of Social Research</span><span class="course-meta">4.6 / 5.0 · In-person</span></li>
+      <li class="course-item"><span class="course-name">Social Statistics</span><span class="course-meta">4.6 / 5.0 · Online</span></li>
+    </ul>
+  </div>
+
+  <div class="institution-block">
+    <h3>Gettysburg College</h3>
+    <div class="years">2020 – 2023</div>
+    <ul class="course-list">
+      <li class="course-item"><span class="course-name">Data Analysis and Statistics</span><span class="course-meta">4.3 / 5.0 · In-person &amp; Online</span></li>
+      <li class="course-item"><span class="course-name">The Inequity of Crisis</span><span class="course-meta">4.9 / 5.0 · Online</span></li>
+      <li class="course-item"><span class="course-name">Introduction to Sociology</span><span class="course-meta">4.5 / 5.0 · In-person &amp; Online</span></li>
+      <li class="course-item"><span class="course-name">Population</span><span class="course-meta">4.5 / 5.0 · In-person</span></li>
+      <li class="course-item"><span class="course-name">Health, Illness, and Society</span><span class="course-meta">4.6 / 5.0 · In-person</span></li>
+    </ul>
+  </div>
+
+  <div class="institution-block">
+    <h3>University of Maryland, College Park</h3>
+    <div class="years">2012 – 2020</div>
+    <ul class="course-list">
+      <li class="course-item"><span class="course-name">Introduction to Research Methods in Sociology</span><span class="course-meta">4.8 / 5.0 · In-person</span></li>
+      <li class="course-item"><span class="course-name">Contemporary Social Problems</span><span class="course-meta">4.0 / 5.0 · Online</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- OTHER TEACHING -->
+<div class="section-wrap">
+  <p class="section-label">Other Teaching Experience</p>
+
+  <p style="font-size:0.88rem; font-weight:500; color:var(--text); margin-bottom:0.6rem;">Seminar Instructor</p>
+  <ul class="seminar-list">
+    <li class="seminar-item">
+      <div class="sem-title">Introduction to Quantitative Methods using STATA</div>
+      <div class="sem-meta">2022 · Korea University</div>
+    </li>
+    <li class="seminar-item">
+      <div class="sem-title">Introduction to Longitudinal Analysis using STATA</div>
+      <div class="sem-meta">2021 · Korea University</div>
+    </li>
+    <li class="seminar-item">
+      <div class="sem-title">Quantitative Analysis for Thesis Writing with SPSS</div>
+      <div class="sem-meta">2011 · Hanyang Cyber University</div>
+    </li>
+  </ul>
+
+  <p style="font-size:0.88rem; font-weight:500; color:var(--text); margin-top:1.5rem; margin-bottom:0.6rem;">Lab Instructor</p>
+  <ul class="seminar-list">
+    <li class="seminar-item">
+      <div class="sem-title">Intermediate Sociological Statistics</div>
+      <div class="sem-meta">2019 · University of Maryland, College Park</div>
+    </li>
+    <li class="seminar-item">
+      <div class="sem-title">Introduction to Statistics in Sociology</div>
+      <div class="sem-meta">2016–2018 · University of Maryland, College Park</div>
+    </li>
+    <li class="seminar-item">
+      <div class="sem-title">Introduction to Research Methods in Sociology</div>
+      <div class="sem-meta">2012–2014 · University of Maryland, College Park</div>
+    </li>
+  </ul>
+</div>
+
+<!-- COURSES AVAILABLE -->
+<div class="section-wrap">
+  <p class="section-label">Courses Available to Offer</p>
+  <p style="font-size:0.95rem; color:var(--muted); line-height:1.8;">
+    Introduction to (or Intermediate) Data Analysis and Statistics · Sociology of Religion · Sociology of Aging · Sociology of Family · Sociology of Mental Health · Demographic Techniques · Introduction to Sociology of Deviance · Contemporary Social Problems in South Korea
+  </p>
+</div>
+
+<footer>
+  <p>Jaein Lee · Korea University Sejong Campus · poryma@korea.ac.kr</p>
+</footer>
+
+</body>
+</html>

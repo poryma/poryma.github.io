@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV – Jaein Lee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #f4f3ee; --text: #1c1c1a; --muted: #6b6b63; --green: #8B0029; --border: #ddddd5; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.7; }
+
+    nav {
+      position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border);
+      z-index: 100; padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-name { font-weight: 600; font-size: 1rem; color: var(--text); text-decoration: none; }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.95rem; padding-bottom: 2px; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); border-bottom: 2px solid var(--text); }
+
+    .page-header { max-width: 900px; margin: 0 auto; padding: 4rem 5% 2rem; }
+    .page-header h1 { font-family: 'EB Garamond', serif; font-size: 2.8rem; font-weight: 700; }
+    .page-header p { color: var(--muted); font-size: 1rem; margin-top: 0.8rem; max-width: 620px; line-height: 1.75; }
+
+    .btn {
+      display: inline-block; padding: 0.55rem 1.3rem; font-size: 0.92rem;
+      text-decoration: none; border-radius: 4px; margin-top: 1.2rem;
+      background: var(--green); color: #fff; border: 1.5px solid var(--green);
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #6b0020; }
+
+    .section-wrap { max-width: 900px; margin: 0 auto; padding: 2.5rem 5%; border-top: 1px solid var(--border); }
+    .section-label { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.2rem; }
+
+    .entry { display: grid; grid-template-columns: 90px 1fr; gap: 0 1.5rem; padding: 0.6rem 0; font-size: 0.93rem; border-bottom: 1px solid var(--border); }
+    .entry:last-child { border-bottom: none; }
+    .entry-year { color: var(--muted); padding-top: 0.05rem; }
+    .entry-body { color: var(--text); line-height: 1.6; }
+    .entry-body .inst { color: var(--muted); font-size: 0.87rem; }
+
+    footer { border-top: 1px solid var(--border); padding: 2rem 5%; text-align: center; color: var(--muted); font-size: 0.82rem; max-width: 900px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-name" href="index.html">Jaein Lee</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="teaching.html">Teaching</a></li>
+    <li><a href="cv.html" class="active">CV</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <h1>Curriculum Vitae</h1>
+  <p>You can download the full CV as a PDF, or browse the highlights below.</p>
+  <!-- Replace the href below with the actual path to your PDF CV once uploaded -->
+  <a class="btn" href="Jaein_Lee_CV.pdf" download>↓ Download CV (PDF)</a>
+</div>
+
+<!-- ACADEMIC POSITIONS -->
+<div class="section-wrap">
+  <p class="section-label">Academic Positions</p>
+  <div class="entry">
+    <div class="entry-year">2025–</div>
+    <div class="entry-body">
+      Assistant Professor<br>
+      <span class="inst">Department of Public Sociology, Korea University Sejong Campus</span>
+    </div>
+  </div>
+  <div class="entry">
+    <div class="entry-year">2023–2025</div>
+    <div class="entry-body">
+      Assistant Professor of Sociology<br>
+      <span class="inst">Department of Sociology and Criminology, Arkansas State University</span>
+    </div>
+  </div>
+  <div class="entry">
+    <div class="entry-year">2023–</div>
+    <div class="entry-body">
+      External Faculty Affiliate<br>
+      <span class="inst">Maryland Population Research Center &amp; Maryland Time Use Lab, University of Maryland, College Park</span>
+    </div>
+  </div>
+  <div class="entry">
+    <div class="entry-year">2020–2022</div>
+    <div class="entry-body">
+      Visiting Assistant Professor of Sociology<br>
+      <span class="inst">Sociology Department, Gettysburg College</span>
+    </div>
+  </div>
+</div>
+
+<!-- EDUCATION -->
+<div class="section-wrap">
+  <p class="section-label">Education</p>
+  <div class="entry">
+    <div class="entry-year">2020</div>
+    <div class="entry-body">
+      Ph.D., Sociology<br>
+      <span class="inst">University of Maryland, College Park</span>
+    </div>
+  </div>
+  <div class="entry">
+    <div class="entry-year">2020</div>
+    <div class="entry-body">
+      Population Studies Certificate<br>
+      <span class="inst">Maryland Population Research Center, University of Maryland</span>
+    </div>
+  </div>
+  <div class="entry">
+    <div class="entry-year">2014</div>
+    <div class="entry-body">
+      M.A., Sociology<br>
+      <span class="inst">University of Maryland, College Park</span>
+    </div>
+  </div>
+  <div class="entry">
+    <div class="entry-year">2009</div>
+    <div class="entry-body">
+      B.A., Sociology<br>
+      <span class="inst">Korea University, Korea</span>
+    </div>
+  </div>
+</div>
+
+<!-- FELLOWSHIPS & AWARDS -->
+<div class="section-wrap">
+  <p class="section-label">Fellowships, Awards &amp; Scholarships</p>
+  <div class="entry">
+    <div class="entry-year">2023</div>
+    <div class="entry-body">PAA Poster Award<br><span class="inst">Population Association of America</span></div>
+  </div>
+  <div class="entry">
+    <div class="entry-year">2022</div>
+    <div class="entry-body">Johnson Creative Teaching Summer Grant<br><span class="inst">Gettysburg College</span></div>
+  </div>
+  <div class="entry">
+    <div class="entry-year">2016</div>
+    <div class="entry-body">Summer Graduate Research Grant<br><span class="inst">University of Maryland</span></div>
+  </div>
+  <div class="entry">
+    <div class="entry-year">2015</div>
+    <div class="entry-body">Summer Grant for ICPSR Summer Statistics Course<br><span class="inst">University of Maryland</span></div>
+  </div>
+  <div class="entry">
+    <div class="entry-year">2014</div>
+    <div class="entry-body">Summer Research Fellowship<br><span class="inst">University of Maryland</span></div>
+  </div>
+  <div class="entry">
+    <div class="entry-year">2010</div>
+    <div class="entry-body">Brain Korea 21 Scholarship<br><span class="inst">National Research Foundation of Korea</span></div>
+  </div>
+  <div class="entry">
+    <div class="entry-year">2010</div>
+    <div class="entry-body">General Scholarship<br><span class="inst">Korea University</span></div>
+  </div>
+</div>
+
+<footer>
+  <p>Jaein Lee · Korea University Sejong Campus · poryma@korea.ac.kr</p>
+</footer>
+
+</body>
+</html>
