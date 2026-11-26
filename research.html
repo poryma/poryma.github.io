@@ -55,6 +55,12 @@
     }
 
     footer { border-top: 1px solid var(--border); padding: 2rem 5%; text-align: center; color: var(--muted); font-size: 0.82rem; max-width: 900px; margin: 0 auto; }
+    details.wip { border: 1px solid var(--border); border-radius: 6px; background: #fff; }
+    details.wip > summary { cursor: pointer; padding: 0.9rem 1.1rem; list-style: none; display:flex; justify-content:space-between; }
+    details.wip > summary::-webkit-details-marker { display: none; }
+    details.wip[open] > summary .chev { transform: rotate(45deg); }
+    details.wip .chev { color: var(--green); transition: transform .2s; }
+    details.wip .pub-list { padding: 0 1.1rem 0.6rem; }
   </style>
 </head>
 <body>
@@ -139,21 +145,10 @@
     <li class="pub-item">
       <div class="pub-title">An Exploratory Approach to Changes in Jobs for Female Workers: A Focus on Data on Job Change from the Korean Longitudinal Survey of Women and Families</div>
       <div class="pub-authors">Lee, Myoung-Jin, So-Young Ahn and <strong>Jaein Lee</strong>.</div>
-      <div class="pub-journal"><em>Gender Studies and Policy Review</em>, 5, 28–43, 2012.</div>
-    </li>
-
-    <li class="pub-item">
-      <div class="pub-title">The Change of Government Policy toward PC Bang in the Expansion of the Internet in Korea</div>
-      <div class="pub-authors">Kim, Ryoung-Hee, So-Young Ahn, <strong>Jaein Lee</strong>, and Myoung-Jin Lee.</div>
-      <div class="pub-journal"><em>The Information and Society</em>, 18, 1–25, 2010. [in Korean]</div>
-    </li>
-
-  </ul>
-</div>
-
-<!-- UNDER REVIEW -->
+      <div <!-- IN PROGRESS -->
 <div class="section-wrap">
-  <p class="section-label">Manuscripts Under Review</p>
+  <p class="section-label">Work in Progress</p>
+  <details class="wip"><summary><span><strong style="font-weight:500">Manuscripts in progress</strong> <span style="color:var(--muted);font-size:0.85rem">· 11 papers · click to expand</span></span><span class="chev">+</span></summary>
   <ul class="pub-list">
     <li class="pub-item">
       <div class="pub-title">Suicidal Thoughts in South Korea: Exploration of Backgrounds of Increasing Trends in Suicidal Thoughts of Elderly Groups</div>
@@ -167,13 +162,7 @@
       <div class="pub-title">Korean Women's Work and Family Trajectories and Mental Health Outcomes</div>
       <div class="pub-authors">Park, Jiae and <strong>Jaein Lee</strong>.*</div>
     </li>
-  </ul>
-</div>
-
-<!-- IN PROGRESS -->
-<div class="section-wrap">
-  <p class="section-label">Manuscripts in Progress</p>
-  <ul class="pub-list">
+  
     <li class="pub-item">
       <div class="pub-title">Time Use Patterns of Korean Older Adults – Social Isolation and Leisure Time</div>
       <div class="pub-authors"><strong>Lee, Jaein</strong>.</div>
@@ -204,6 +193,12 @@
     </li>
     <li class="pub-item">
       <div class="pub-title">Demand Without Supply: Egalitarian Family Ideals, the Unequal Division of Labor, and the Marriage Gateway to Lowest-Low Fertility in South Korea</div>
+      <div class="pub-authors"><strong>Lee, Jaein</strong>.</div>
+    </li>
+  </ul></details>
+  <p style="font-size:0.82rem; color:var(--muted); margin-top:1.2rem;">* Indicates corresponding author. ** Indicates coauthor was a student when the project started.</p>
+  <p style="font-size:0.92rem; margin-top:1rem;">For current lab projects and the data we use, see the <a class="doi" href="https://poryma.github.io/lab/research.html">Life, Death &amp; Inequality Lab</a>.</p>
+</div>in South Korea</div>
       <div class="pub-authors"><strong>Lee, Jaein</strong>.</div>
     </li>
   </ul>
